@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary aim of using Lasso and Ridge regression in the experiment?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To improve prediction accuracy and model interpretability",
+        "b": "To increase the complexity of the model",
+        "c": "To eliminate the need for feature selection",
+        "d": "To decrease the training time"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct! Lasso and Ridge regression aim to improve prediction accuracy and simplify the model by regularizing coefficients.",
+        "b": "Incorrect. Regularization reduces complexity, not increases it.",
+        "c": "Incorrect. Lasso performs feature selection but does not eliminate its need.",
+        "d": "Incorrect. Regularization may not necessarily reduce training time."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which regularization technique sets some coefficients to zero, effectively performing feature selection?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Ridge Regression",
+        "b": "Linear Regression",
+        "c": "Lasso Regression",
+        "d": "None of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Ridge shrinks coefficients but does not set them to zero.",
+        "b": "Incorrect. Linear regression does not involve regularization.",
+        "c": "Correct! Lasso regression uses L1 regularization, which can set some coefficients to zero.",
+        "d": "Incorrect. Lasso performs feature selection."
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How does Ridge regression improve model stability?",
+      "answers": {
+        "a": "By setting coefficients to zero",
+        "b": "By adding L2 regularization to discourage large coefficients",
+        "c": "By increasing the model’s complexity",
+        "d": "By removing irrelevant features automatically"
+      },
+      "explanations": {
+        "a": "Incorrect. Ridge regression does not set coefficients to zero.",
+        "b": "Correct! Ridge regression uses L2 regularization to stabilize the model by reducing large coefficients.",
+        "c": "Incorrect. Regularization aims to simplify the model.",
+        "d": "Incorrect. Ridge does not perform automatic feature selection."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary evaluation metric used to compare the performance of the models?",
+      "answers": {
+        "a": "Root Mean Squared Error (RMSE)",
+        "b": "R-squared (R²)",
+        "c": "Mean Squared Error (MSE)",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "Partially correct, but RMSE is not the only metric used.",
+        "b": "Partially correct, but R² is one of the metrics among others.",
+        "c": "Partially correct, but MSE alone does not provide a complete evaluation.",
+        "d": "Correct! All these metrics are used to evaluate model performance."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which type of regularization does Ridge regression apply?",
+      "answers": {
+        "a": "L1 norm",
+        "b": "L2 norm",
+        "c": "Combination of L1 and L2",
+        "d": "No regularization"
+      },
+      "explanations": {
+        "a": "Incorrect. L1 regularization is used in Lasso.",
+        "b": "Correct! Ridge regression applies L2 regularization.",
+        "c": "Incorrect. Combination of L1 and L2 is used in ElasticNet.",
+        "d": "Incorrect. Ridge regression involves regularization."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
