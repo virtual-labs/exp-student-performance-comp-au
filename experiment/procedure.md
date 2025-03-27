@@ -11,6 +11,7 @@
  
 ![Step-3](./images/Step-3.png) 
 
+
 <p><strong>Step 4:</strong> Adjust the slider to set the appropriate train-test split for the dataset. A common split is 80/20 for training and testing. After splitting, click on the <strong>"NEXT"</strong> button to apply <strong>Linear Regression</strong> to the data.</p>
 
 ![Step-4](./images/Step-4.png) 

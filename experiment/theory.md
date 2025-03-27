@@ -19,6 +19,7 @@
   <sup>1</sup>/<sub>m</sub> &sum;<sub>i=1</sub><sup>m</sup> (y<sub>i</sub> - ŷ<sub>i</sub>)<sup>2</sup>
 </p>
 <p>
+
   where <i>m</i> is the number of students, <i>y<sub>i</sub></i> is the actual score, and 
   <i>ŷ<sub>i</sub> = β<sub>0</sub> + β<sub>1</sub>x<sub>i</sub></i> is the predicted score. 
   The optimal β<sub>0</sub> and β<sub>1</sub> are found using Ordinary Least Squares (OLS).
