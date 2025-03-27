@@ -14,6 +14,7 @@
 <h4>Objective</h4>
 <p>The model minimizes the Mean Squared Error (MSE):</p>
 <p>
+
   J(β<sub>0</sub>, β<sub>1</sub>) = 
   <sup>1</sup>/<sub>m</sub> &sum;<sub>i=1</sub><sup>m</sup> (y<sub>i</sub> - ŷ<sub>i</sub>)<sup>2</sup>
 </p>
