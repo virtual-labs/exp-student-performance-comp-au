@@ -2,38 +2,55 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the main advantage of using Lasso regression over Linear regression?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It reduces training time significantly.",
+        "b": "It automatically selects important features by setting some coefficients to zero.",
+        "c": "It minimizes bias in the model.",
+        "d": "It increases the complexity of the model."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Regularization does not focus on reducing training time.",
+        "b": "Correct! Lasso regression sets some coefficients to zero, making it useful for feature selection.",
+        "c": "Incorrect. Regularization aims to reduce variance, not bias.",
+        "d": "Incorrect. Regularization simplifies the model by controlling complexity."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "How does increasing the alpha value in Ridge regression affect the model?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Increases the magnitude of coefficients.",
+        "b": "Decreases the magnitude of coefficients.",
+        "c": "Has no impact on the model.",
+        "d": "Makes the model underfit the data."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Ridge regression discourages large coefficients.",
+        "b": "Correct! Increasing alpha penalizes large coefficients, leading to smaller magnitudes.",
+        "c": "Incorrect. Alpha has a direct impact on regularization strength.",
+        "d": "Incorrect. Higher alpha may increase bias but does not necessarily lead to underfitting."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is true about the role of alpha in Lasso and Ridge regression?",
+      "answers": {
+        "a": "Higher alpha values reduce overfitting by increasing regularization.",
+        "b": "Lower alpha values increase model complexity.",
+        "c": "Alpha values have no impact on model performance.",
+        "d": "Alpha values increase bias and variance simultaneously."
+      },
+      "explanations": {
+        "a": "Correct! Higher alpha values increase regularization, reducing overfitting.",
+        "b": "Partially correct, but alpha controls regularization, not complexity directly.",
+        "c": "Incorrect. Alpha significantly affects model regularization.",
+        "d": "Incorrect. Alpha balances bias and variance, not increases both."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
     }
   ]
 }
