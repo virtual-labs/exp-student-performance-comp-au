@@ -1,4 +1,4 @@
 <h3>Aim</h3>
-<p>The aim of this experiment is to explore and compare the effectiveness of linear, Lasso, and Ridge regression models for the problem statement in Experiment 6.
+<p>
+  The objective of this project is to conduct a comparative analysis of Linear Regression, Lasso Regression, and Ridge Regression models to determine the most effective approach for predictive accuracy.
 </p>
-
