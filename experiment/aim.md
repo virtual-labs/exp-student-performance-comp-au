@@ -1,4 +1,1 @@
-<h3>Aim</h3>
-<p>
-  The objective of this project is to conduct a comparative analysis of Linear Regression, Lasso Regression, and Ridge Regression models to determine the most effective approach for predictive accuracy.
-</p>
+The aim of this experiment is to compare the performance of **Linear Regression**, **Lasso Regression**, and **Ridge Regression** to determine the most effective approach for predictive accuracy. The experiment evaluates each model using key error metrics and examines how **L1** (Lasso) and **L2** (Ridge) regularization influence accuracy, model stability, and coefficient behavior to identify the most reliable predictive approach.
