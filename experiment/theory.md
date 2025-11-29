@@ -1,75 +1,66 @@
-
-
 Predicting student performance from study hours is a classic regression task. This experiment compares three widely used regression techniques — **Linear Regression**, **Lasso Regression**, and **Ridge Regression** — to assess their predictive accuracy, stability, and generalization performance on noisy or high-dimensional data. Regularization methods such as Lasso and Ridge are specifically designed to prevent overfitting and enhance model robustness.
 
 #### 1. Linear Regression (Ordinary Least Squares)
 
-Linear Regression models the relationship between study hours (\(X\)) and exam score (\(Y\)) using a linear equation:
+Linear Regression models the relationship between study hours (X) and exam score (Y) using a linear equation:
 
-$$
-Y = \beta_0 + \beta_1 X + \varepsilon
-$$
+**`Y = β₀ + β₁ X + ε`**
 
 Where:  
-- \(Y\): Exam score (dependent variable)  
-- \(X\): Number of study hours (independent variable)  
-- \(\beta_0\): Intercept (expected score when \(X = 0\))  
-- \(\beta_1\): Slope (change in score per additional study hour)  
-- \(\varepsilon\): Random error term, assumed \(\varepsilon \sim N(0, \sigma^2)\)
+- Y → Exam score (dependent variable)  
+- X → Number of study hours (independent variable)  
+- β₀ → Intercept (expected score when X = 0)  
+- β₁ → Slope (increase in score per extra hour)  
+- ε → Random error, assumed ε ~ N(0, σ²)
 
 **Interpretation Example**:  
-A fitted model \(\hat{Y} = 40 + 5X\) indicates that each additional study hour increases the predicted score by 5 points.
+A fitted model **`Ŷ = 40 + 5X`** means each additional study hour increases the predicted score by 5 points.
 
-**Cost Function** (minimized via Ordinary Least Squares):  
-$$
-J(\beta_0, \beta_1) = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2 \quad \text{(Mean Squared Error)}
-$$
+**Cost Function** (minimized by OLS):
+
+**`J(β₀, β₁) = (1/n) Σ(i=1 to n) (Y_i − Ŷ_i)²`**
 
 **Key Assumptions**:  
-- Linearity between predictor and response  
-- Independence of observations  
-- Homoscedasticity (constant variance of residuals)  
-- Normality of residuals (for valid inference)
+- Linearity  
+- Independence  
+- Homoscedasticity  
+- Normality of residuals
 
 #### 2. Lasso Regression (L1 Regularization)
 
-Lasso (Least Absolute Shrinkage and Selection Operator) extends Linear Regression by adding an **L1 penalty**:
+Lasso adds an **L1 penalty** penalty to the cost function:
 
-$$
-J(\beta_0, \beta) = \text{MSE} + \alpha \sum_{j=1}^{p} |\beta_j|
-$$
+**`J(β₀, β) = MSE + α Σ(j=1 to p) |βⱼ|`**
 
 **Key Characteristics**:  
-- The absolute value penalty drives less important coefficients **exactly to zero**  
-- Enables **automatic feature selection**  
-- Produces **sparse**, highly interpretable models  
+- Drives unimportant coefficients **exactly to zero**  
+- Performs **automatic feature selection**  
+- Produces **sparse and interpretable** models
 
-**Practical Advantage in Student Data**:  
-When multiple predictors (e.g., study hours, sleep duration, attendance) are included, Lasso eliminates irrelevant features, retaining only the most influential ones.
+**Best for**: Student datasets with many predictors — Lasso will keep only the truly important ones (e.g., only study hours matter, sleep may be dropped).
 
 #### 3. Ridge Regression (L2 Regularization)
 
-Ridge Regression incorporates an **L2 penalty** on the squared coefficients:
+Ridge adds an **L2 penalty** (squared coefficients):
 
-$$
-J(\beta_0, \beta) = \text{MSE} + \alpha \sum_{j=1}^{p} \beta_j^2
-$$
+**`J(β₀, β) = MSE + α Σ(j=1 to p) βⱼ²`**
 
 **Key Characteristics**:  
-- Shrinks all coefficients toward zero but **rarely to exactly zero**  
-- Highly effective against **multicollinearity**  
-- Distributes coefficient influence more evenly  
+- Shrinks coefficients toward zero but **rarely to exactly zero**  
+- Excellent at handling **multicollinearity**  
+- More stable when predictors are highly correlated
 
-**Practical Advantage in Student Data**:  
-When predictors such as study hours, attendance, and revision time are correlated, Ridge prevents excessively large coefficients and yields a more stable model.
+**Best for**: Cases where study hours, attendance, and revision time are correlated — Ridge keeps all but prevents extreme values.
 
 #### Comparison of the Three Models
 
-| Aspect                     | Linear Regression         | Lasso Regression              | Ridge Regression              |
-|----------------------------|---------------------------|-------------------------------|-------------------------------|
-| Regularization             | None                      | L1 (\(\sum |\beta_j|\))       | L2 (\(\sum \beta_j^2\))       |
-| Feature Selection          | No                        | Yes (sets some \(\beta = 0\)) | No                            |
-| Handles Multicollinearity  | Poor                      | Moderate                      | Excellent                     |
-| Coefficient Shrinkage      | None                      | Strong (can reach zero)       | Moderate (approaches zero)    |
-| Resulting Model            | Dense                     | Sparse                        | Dense                         |
-| Best Use Case              | Clean, low-dimensional data | Need for sparsity & selection | Correlated predictors         |
+| Aspect                     | Linear Regression         | Lasso Regression                  | Ridge Regression                  |
+|----------------------------|---------------------------|-----------------------------------|-----------------------------------|
+| Regularization             | None                      | L1 → **`Σ |βⱼ|`**                | L2 → **`Σ βⱼ²`**                 |
+| Feature Selection          | No                        | Yes (sets some β = 0)             | No                                |
+| Handles Multicollinearity  | Poor                      | Moderate                          | Excellent                         |
+| Coefficient Shrinkage      | None                      | Strong (can be zero)              | Moderate (near zero)              |
+| Resulting Model            | Dense                     | Sparse                            | Dense                             |
+| Best Use Case              | Clean, low-dim data       | Need sparsity & selection          | Correlated predictors              |
+
+
