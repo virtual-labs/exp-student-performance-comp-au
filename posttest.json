@@ -1,0 +1,112 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the main advantage of using Lasso Regression over Linear Regression?",
+      "answers": {
+        "a": "It reduces training time significantly.",
+        "b": "It automatically selects important features by setting some coefficients to zero.",
+        "c": "It minimizes model bias completely.",
+        "d": "It increases the number of coefficients in the model."
+      },
+      "explanations": {
+        "a": "Incorrect. Lasso focuses on regularization, not speeding up training.",
+        "b": "Correct! Lasso performs feature selection by shrinking some coefficients to zero.",
+        "c": "Incorrect. Lasso may increase bias due to regularization.",
+        "d": "Incorrect. Lasso actually reduces unnecessary coefficients."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "How does increasing the alpha value in Ridge Regression affect the model?",
+      "answers": {
+        "a": "It increases the magnitude of coefficients.",
+        "b": "It decreases the magnitude of coefficients.",
+        "c": "It has no effect on the model.",
+        "d": "It completely eliminates some coefficients."
+      },
+      "explanations": {
+        "a": "Incorrect. Ridge discourages large coefficients.",
+        "b": "Correct! A higher alpha increases regularization, shrinking coefficients.",
+        "c": "Incorrect. Alpha directly controls regularization strength.",
+        "d": "Incorrect. Ridge never eliminates coefficients completely; only Lasso can."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "Which statement correctly describes the role of alpha in Lasso and Ridge Regression?",
+      "answers": {
+        "a": "Higher alpha values reduce overfitting by increasing regularization.",
+        "b": "Alpha has no impact on model generalization.",
+        "c": "Lower alpha values decrease model flexibility.",
+        "d": "Alpha controls the learning rate of the model."
+      },
+      "explanations": {
+        "a": "Correct! Higher alpha increases regularization strength and reduces overfitting.",
+        "b": "Incorrect. Alpha greatly impacts model complexity and generalization.",
+        "c": "Incorrect. Lower alpha reduces regularization, making the model more flexible.",
+        "d": "Incorrect. Alpha is not related to the learning rate."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "Which model is most suitable when predictors are highly correlated?",
+      "answers": {
+        "a": "Linear Regression",
+        "b": "Lasso Regression",
+        "c": "Ridge Regression",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "Incorrect. Linear Regression performs poorly with multicollinearity.",
+        "b": "Incorrect. Lasso may arbitrarily eliminate correlated features.",
+        "c": "Correct! Ridge handles multicollinearity effectively by distributing coefficient weights.",
+        "d": "Incorrect. Ridge is specifically designed to handle this scenario."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "Which of the following best describes Linear Regression?",
+      "answers": {
+        "a": "A model that always sets some coefficients to zero.",
+        "b": "A model that establishes a linear relationship without any regularization.",
+        "c": "A regularized model that uses L2 penalty.",
+        "d": "A nonlinear model suitable only for classification."
+      },
+      "explanations": {
+        "a": "Incorrect. Only Lasso sets coefficients to zero.",
+        "b": "Correct! Linear Regression has no regularization by default.",
+        "c": "Incorrect. Ridge uses L2 regularization.",
+        "d": "Incorrect. Linear Regression is a regression model, not classification."
+      },
+      "correctAnswer": "b",
+      "difficulty": "easy"
+    },
+
+    {
+      "question": "Which model is most likely to produce a sparse solution (many coefficients becoming zero)?",
+      "answers": {
+        "a": "Linear Regression",
+        "b": "Lasso Regression",
+        "c": "Ridge Regression",
+        "d": "Both Lasso and Ridge"
+      },
+      "explanations": {
+        "a": "Incorrect. Linear Regression does not shrink coefficients.",
+        "b": "Correct! Lasso’s L1 penalty forces some coefficients to zero.",
+        "c": "Incorrect. Ridge reduces magnitude but never sets coefficients to zero.",
+        "d": "Incorrect. Ridge does not produce sparsity."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}

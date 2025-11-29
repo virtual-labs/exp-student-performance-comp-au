@@ -1,0 +1,112 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the primary purpose of using Lasso and Ridge regression in this experiment?",
+      "answers": {
+        "a": "To improve prediction accuracy and control overfitting through regularization",
+        "b": "To make the model more complex",
+        "c": "To increase the number of coefficients",
+        "d": "To reduce dataset size"
+      },
+      "explanations": {
+        "a": "Correct! Lasso and Ridge reduce overfitting and improve accuracy by penalizing large coefficients.",
+        "b": "Incorrect. Regularization simplifies the model instead of making it more complex.",
+        "c": "Incorrect. Regularization typically reduces coefficient values.",
+        "d": "Incorrect. Regularization has no role in reducing dataset size."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "Which regression technique performs automatic feature selection?",
+      "answers": {
+        "a": "Linear Regression",
+        "b": "Ridge Regression",
+        "c": "Lasso Regression",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "Incorrect. Linear Regression includes all features.",
+        "b": "Incorrect. Ridge shrinks coefficients but does not eliminate them.",
+        "c": "Correct! Lasso can shrink coefficients exactly to zero, removing irrelevant features.",
+        "d": "Incorrect. Only Lasso performs feature selection."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "How does Ridge regression help improve model stability when predictors are correlated?",
+      "answers": {
+        "a": "By assigning higher weights to correlated features",
+        "b": "By using L2 regularization to shrink coefficients",
+        "c": "By setting correlated feature coefficients to zero",
+        "d": "By removing correlated features from the dataset"
+      },
+      "explanations": {
+        "a": "Incorrect. Ridge discourages large weights.",
+        "b": "Correct! L2 regularization stabilizes coefficients when predictors are correlated.",
+        "c": "Incorrect. Setting coefficients to zero is performed by Lasso, not Ridge.",
+        "d": "Incorrect. Ridge does not delete features."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "Which metric is commonly used to evaluate regression model performance in this experiment?",
+      "answers": {
+        "a": "Mean Squared Error (MSE)",
+        "b": "R-squared (R²)",
+        "c": "Root Mean Squared Error (RMSE)",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "Partially correct, but not the only metric used.",
+        "b": "Partially correct, but it is only one of the performance metrics.",
+        "c": "Partially correct, but RMSE alone is insufficient.",
+        "d": "Correct! MSE, RMSE, and R² are all used to compare model performance."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+
+    {
+      "question": "Which type of penalty does Lasso regression apply?",
+      "answers": {
+        "a": "L2 penalty",
+        "b": "L1 penalty",
+        "c": "Combination of L1 and L2",
+        "d": "No penalty"
+      },
+      "explanations": {
+        "a": "Incorrect. L2 is used in Ridge.",
+        "b": "Correct! Lasso uses an L1 penalty that encourages sparsity.",
+        "c": "Incorrect. Combination is used in ElasticNet.",
+        "d": "Incorrect. Lasso always applies L1 regularization."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "Which of the following statements is TRUE about Linear Regression compared to Lasso and Ridge?",
+      "answers": {
+        "a": "It performs better when the dataset contains noise and multicollinearity",
+        "b": "It does not apply any regularization",
+        "c": "It automatically removes irrelevant features",
+        "d": "It shrinks coefficients but never sets them to zero"
+      },
+      "explanations": {
+        "a": "Incorrect. Linear Regression performs poorly when noise or multicollinearity is present.",
+        "b": "Correct! Linear Regression uses no regularization by default.",
+        "c": "Incorrect. Only Lasso removes irrelevant features.",
+        "d": "Incorrect. This describes Ridge, not Linear Regression."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
