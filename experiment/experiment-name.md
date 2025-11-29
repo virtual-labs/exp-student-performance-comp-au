@@ -1,1 +1,1 @@
-### Comparison of Linear, Lasso, and Ridge Regression
+## Comparison of Linear, Lasso, and Ridge Regression
